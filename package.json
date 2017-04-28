@@ -1,0 +1,16 @@
+{
+  "name": "model_generator",
+  "version": "0.0.1",
+  "description": "generate Angular2+ TypeScript models from Swagger contracts",
+  "main": "./lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "UnEpicFail",
+  "license": "ISC",
+  "dependencies": {
+    "js-yaml": "^3.8.3",
+    "mkdirp": "^0.5.1",
+    "mustache": "^2.3.0"
+  }
+}

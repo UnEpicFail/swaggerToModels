@@ -1,0 +1,30 @@
+/**
+ * {{description}}
+ */
+
+{{#getImports}}
+{{/getImports}}
+
+
+{{#extend}}
+export class {{definitionName}} extends {{extend}}
+{{/extend}}
+{{^extend}}
+export class {{definitionName}}
+{{/extend}}
+{
+    {{#properties}}
+    {{name}}: {{type}}; //{{description}}
+    {{/properties}}
+
+    constructor(json) {
+        json = (json || {})
+        {{#extend}}
+        super(json)
+        {{/extend}}
+    }
+
+    keys() {
+        return Object.keys(this)
+    }
+}
