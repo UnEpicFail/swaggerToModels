@@ -1,6 +1,6 @@
 {
   "name": "model_generator",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "generate Angular2+ TypeScript models from Swagger contracts",
   "main": "./lib/index.js",
   "bin": {
