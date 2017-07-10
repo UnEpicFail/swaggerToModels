@@ -7,10 +7,10 @@
 
 
 {{#extend}}
-export class {{definitionName}} extends {{extend}}
+export class {{definitionName}}Model extends {{extend}}
 {{/extend}}
 {{^extend}}
-export class {{definitionName}}
+export class {{definitionName}}Model
 {{/extend}}
 {
     _isEmpty: boolean /*указывает на то пустой ли объект*/
@@ -26,7 +26,7 @@ export class {{definitionName}}
         this._isEmpty = this.isEmpty(json)
         {{#fillProperties}}
         {{/fillProperties}}
-       
+
     }
 
     keys() {
@@ -38,7 +38,7 @@ export class {{definitionName}}
             return true
         }
 
-        let res = true 
+        let res = true
         Object.keys(json).map(i => {
             if (i !== '_isEmpty') {
                 if (Array.isArray(json[i])){
@@ -48,7 +48,7 @@ export class {{definitionName}}
                 } else if (typeof json[i] === 'object') {
                     res = res && this.isEmpty(json[i])
                 } else {
-                    res =  res && (json[i] === null || typeof(json[i]) === 'undefined') 
+                    res =  res && (json[i] === null || typeof(json[i]) === 'undefined')
                 }
             }
         })
